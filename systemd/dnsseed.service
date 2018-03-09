@@ -1,0 +1,20 @@
+# /etc/systemd/system/pdnsseed.service
+
+[Unit]
+Description=Citizenshipcoin dns seed service - mainnet
+After=network.target
+
+[Service]
+ExecStart=/home/ubuntu/citizenshipcoin-seeder/./dnsseed -h dnsseed.citizenshipcoin.org  -n 13.59.189.11  -t 32
+WorkingDirectory=/home/ubuntu/citizenshipcoin-seeder
+KillMode=process
+Restart=always
+
+## security
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=full
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target
