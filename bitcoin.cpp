@@ -293,7 +293,7 @@ bool TestNode(const CService &cip, int &ban, int &clientV, std::string &clientSV
 
 /*
 int main(void) {
-  CService ip("seed.ppcoin.net", 9901, true);
+  CService ip("dnsseed.citizenshipcoin.org", 26201, true);
   vector<CAddress> vAddr;
   vAddr.clear();
   int ban = 0;
@@ -301,4 +301,3 @@ int main(void) {
   printf("ret=%s ban=%i vAddr.size()=%i\n", ret ? "good" : "bad", ban, (int)vAddr.size());
 }
 */
-
