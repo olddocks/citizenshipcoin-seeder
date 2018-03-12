@@ -349,7 +349,11 @@ static const string testnet_seeds[] = {"dnsseed.citizenshipcoin.org", ""};
 static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
-  db.Add(CService("127.0.0.1", fTestNet ? 26202 : 26201), true);
+
+ db.Add(CService("13.58.84.249", fTestNet ? 26202 : 26201), true);
+
+//db.Add(CService("13.58.84.249", GetDefaultPort()), true);
+// db.Add(CService("kjy2eqzk4zwi5zd3.onion", 26201), true); 
 
   do {
     for (int i=0; seeds[i] != ""; i++) {
